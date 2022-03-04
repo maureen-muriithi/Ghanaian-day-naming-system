@@ -1,0 +1,12 @@
+.jumbotron {
+  background-image: url(/images/ghanapic.jpg);
+  opacity: 1;
+  background-size: cover;
+  font-size: xx-large;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
