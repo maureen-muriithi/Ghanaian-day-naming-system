@@ -42,3 +42,21 @@
   padding: 10px;
   margin: 0px;
 }
+input[type=text] {
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #1073d0;
+  font-size: 15px;
+}
+
+input[type=text] :focus {
+  margin: auto;
+  padding: 10px;
+  border: 2xp solid orange;
+}
+
+#inlineFormCustomSelectGender {
+  margin: auto;
+  border: 2px solid #1073d0;
+  font-size: 15px;
+}
