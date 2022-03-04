@@ -25,7 +25,7 @@
       </nav>
   </div>
     <div class="jumbotron">
-      <h1 class="display-4">What is your Akan name?</h1>
+      <h1 class="display-4" style="font-weight: 600;" >What is your Akan name?</h1>
       <p class="lead">
         <strong>Akan names are derived from Ghanian culture.</strong>
       </p>
@@ -47,16 +47,26 @@
       </div>
     </div>
   </div>
+
+  <!-- A description of the application -->
   <div class="row">
-    <div class="col-xl-7">
+    <div class="col-md-6" id="description">
       <h4>Would you expect that the particular day of the week, you are or were born, can determine your first name? 
       </h4>
-      <p>Well, according to the Ghanaian culture, it is quite frequent. 
+      <p>Well, according to the Ghanaian culture, it is quite frequent.
+      </p>
+      <p>
         According to the Akan naming culture in Ghana, depending on whether you are male or female, children are given a "day name" which corresponds to the day in the week when they were born. These day names have further meanings concerning the soul and character of the person.
+      </p>
+      <p>
         This application will determine which particular day of the week you  were born, and what your Akan name is.
       </p>
     </div>
-    <div class="col-xl-5">
+
+    <!-- form to fill name and date of birth --> 
+      <!-- two columns for the name -->
+    <div class="col-md-6" id="colForm">
+      <h4><strong>Go ahead and fill in your details to find out your Akan name!</strong></h4>
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -64,11 +74,12 @@
             <input type="text" class="form-control" id="inputFirstName">
           </div>
           <div class="form-group col-md-6">
-            <label for="inputLastName">Password</label>
+            <label for="inputLastName">Last Name</label>
             <input type="password" class="form-control" id="inputLastName">
           </div>
         </div>
         
+        <!-- Input date, month and year of birth -->
         <div class="form-row">
           <div class="form-group col-md-2">
             <label for="inputdate">Date</label>
@@ -86,14 +97,23 @@
             <input type="text" class="form-control" id="inputyear">
           </div>
         </div>
+
+        <!-- Gender selection -->
+        <form class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectGender">Gender</label>
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectGender">
+            <option selected>Choose...</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </form>
         
+        <!-- Submit button -->
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form> -->
-      
+      </form> 
     </div>
   </div>
-  <!-- form to fill name and date of birth --> 
-      <!-- two columns for the name -->
+  
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
