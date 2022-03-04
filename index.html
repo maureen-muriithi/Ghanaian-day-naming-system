@@ -75,7 +75,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputLastName">Last Name</label>
-            <input type="password" class="form-control" id="inputLastName">
+            <input type="text" class="form-control" id="inputLastName">
           </div>
         </div>
         
@@ -83,18 +83,16 @@
         <div class="form-row">
           <div class="form-group col-md-2">
             <label for="inputdate">Date</label>
-            <input type="text" class="form-control" id="inputDate">
+            <input type="text" class="form-control" id="inputDate" placeholder="dd" minlength="1" maxlength="2" >
           </div>
           <div class="form-group col-md-5">
             <label for="inputmonth">Month</label>
-            <select id="inputmonth" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+            <label for="inputdate">Date</label>
+            <input type="text" class="form-control" id="inputMonth" placeholder="mm" minlength="1" maxlength="2" >
           </div>
           <div class="form-group col-md-5">
             <label for="inputyear">Year</label>
-            <input type="text" class="form-control" id="inputyear">
+            <input type="text" class="form-control" id="inputyear" placeholder="yyyy" minlength="4" maxlength="4" >
           </div>
         </div>
 
@@ -132,6 +130,14 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script 
+      document.getElementById("demo").innerHTML = month;
+    ></script>
+    <script
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.getFullYear();
+    ></script>
+
   </body>
 </html>
 
