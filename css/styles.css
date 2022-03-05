@@ -64,12 +64,6 @@ body {
   padding: 5px;
 }
 
-/* #CustomSelectGender,
-.form-control : :hover {
-  margin: auto;
-  padding: 10px;
-  border: 2xp solid orange;
-} */
 
 #submitbtn:hover {
     background-color:#002ead;
@@ -80,10 +74,13 @@ body {
   background-color:#002ead;
   transition: 0.7s;
 }
-.akanName {
+.akanNameResult {
   color: brown;
   font-weight: 600;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: xx-large;
   text-align: center;
+}
+.errors {
+  color: red;
 }

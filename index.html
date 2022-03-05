@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ghanaian Day-naming System</title>
+    <title>Ghanaian-Akan-Names</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -47,12 +47,12 @@
   <!-- A description of the application -->
   <div class="row">
     <div class="col-md-6" id="description">
-      <h4>Would you expect that the particular day of the week, you are or were born, can determine your first name? 
+      <h4 id="introLine">Would you expect that the particular day of the week that you are or were born, can determine your first name? 
       </h4>
       <p>Well, according to the Ghanaian culture, it is quite frequent.
       </p>
       <p>
-        According to the Akan naming culture in Ghana, depending on whether you are male or female, children are given a "day name" which corresponds to the day in the week when they were born. These day names have further meanings concerning the soul and character of the person.
+        In accordance to the Akan naming culture in Ghana, depending on whether you are male or female, children are given a "day name" which corresponds to the day in the week when they were born. These day names have further meanings concerning the soul and character of the person.
       </p>
       <p>
         This application will determine which particular day of the week you  were born, and what your Akan name is.
@@ -63,12 +63,15 @@
       <!-- two columns for the name -->
     <div class="col-md-6" id="colForm">
       <h4 style="color: brown;"><strong>Go ahead and fill in your details to find out your Akan name!</strong></h4>
-      <form id="form">
+      <form  name="Ghanaian-Akan-Names"onsubmit="return false" id="form" >
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputFirstName">First Name</label>
             <input name="firstname" type="text" class="form-control" id="inputFirstName">
           </div>
+          <br>
+          <div class="errors" id="firstNameError"></div>
+          <br>
           <div class="form-group col-md-6">
             <label for="inputLastName">Last Name</label>
             <input name="lastname" type="text" class="form-control" id="inputLastName">
@@ -82,6 +85,9 @@
             <input name="birthDate" type="date" class="form-control" id="birthDate">
           </div>
         </div>
+        <br>
+        <div class="errors" id="birthDateError"></div>
+        <br>
 
         <!-- Gender selection -->
           <label class="my-1 mr-2" for="CustomSelectGender">Gender</label>
@@ -90,21 +96,19 @@
             <option value="1">Male</option>
             <option value="2">Female</option>
           </select>
+          <br>
+          <div class="errors" id="UserGenderError"></div>
+        <br>
         
         <!-- Submit button -->
-        <button type="submit" name="submit" class="btn btn-primary" value="submit" id="submitbtn">Submit</button>
-        <button type="reset" name="refresh" class="btn btn-primary" value="refresh" id="refreshbtn">Refresh</button>
-
-        <div id="errors">
-
+        <button type="submit" name="submit" class="btn btn-primary" value="submit" id="submitbtn" onclick="getAkanName()">Submit</button>
+        <button type="reset" name="reset" class="btn btn-primary" value="refresh" id="refreshbtn" onclick="refreshForm()">Refresh</button>
         </div>
+
         <!-- What to display -->
-        <div class="error-message" id="alertMessage">
-        <p>First name is required </p>
-        <p></p>
-        </div>
-        <div class="akanName" id="">
-          <p class = "output" id="akanMessage"></p>
+      
+        <div>
+          <p id="akanNameResult">""</p>
         </div>
       </form> 
     </div>

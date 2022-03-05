@@ -31,7 +31,8 @@ function getAkanName(){
     var userGenderError = document.getElementById("userGenderError");
 
     //final display after submit
-    var AkanNameResult = document.getElementById("AkanName")
+    var AkanNameResult = document.getElementById("AkanNameResult")
+    var valid = false;
 
     //button event
     submitbtn.onclick = (event) => {
@@ -41,25 +42,42 @@ function getAkanName(){
     //conditions for the required output
     if (birthDate===""){
         birthDateError.innerHTML = "Please enter a valid date of birth ";
+        return false;
     }
     else {
         for (var i=0;i<userGender.length;i++){
             if (userGender[i].checked) {
-                if (userGender[i].value === "Male"){
-                    AkanNameResult.innerHTML = "Hello! "+firstName+ +lastName+  "You were born on, "+days[dayOfWeek]+ "Your Akan Name is: " +maleNames[dayOfWeek];
-                }
-                else {
-                if(userGender[i].value === "Female")
-                    AkanNameResult.innerHTML = "Hello! "+firstName+ +lastName+  "You were born on, "+days[dayOfWeek]+ "Your Akan Name is: " +femNames[dayOfWeek];
-                }
-                break;
+                valid = true
+            break;
             }
+        }
+        if (valid){
+            if (userGender[i].value === "Male"){
+                AkanNameResult.innerHTML = "Hello! "+firstName+ +lastName+  "You were born on, "+days[dayOfWeek]+ "Your Akan Name is: " +maleNames[dayOfWeek];
+             }
+            else {
+            if(userGender[i].value === "Female"){
+                AkanNameResult.innerHTML = "Hello! "+firstName+ +lastName+  "You were born on, "+days[dayOfWeek]+ "Your Akan Name is: " +femNames[dayOfWeek];
+            }
+            }
+        }    
             else {
                 userGenderError.innerHTML = "Please choose your gender";
+                return false;
             }       
-        }
+        
     } 
 }
+
+//for the user to reset or refresh the form
+function refreshForm(){
+    document.getElementById("firstNameError").innerHTML = "";
+    document.getElementById("birthDateError").innerHTML= "";
+    document.getElementById("userGenderError").innerHTML= "";
+    document.getElementById("AkanNameResult").innerHTML= "";
+
+}
+
 
 //     // var firstName =document.getElementById("inputFirstName");
 //     // var lastName =document.getElementById("inputLastName");
