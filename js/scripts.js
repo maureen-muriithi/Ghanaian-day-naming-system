@@ -8,10 +8,16 @@ var submitbtn = document.getElementById(submitbtn);
 
 var date = new date (document.getElementById(inputDate).value)
 var dayOfWeek = date.getDay()
+var month = date.getMonth()
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 var femNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
 var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
 var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+function getMonthName(monthNumber){
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return month(monthNumber);
+}
 
 
 function printResult() {

@@ -16,7 +16,11 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link 
+    rel="stylesheet"
+    href="/css/styles.css" 
+    />
+
   </head>
   <body>
     <div class="container">
@@ -86,13 +90,12 @@
             <input type="text" class="form-control" id="inputDate" placeholder="dd" minlength="1" maxlength="2" >
           </div>
           <div class="form-group col-md-5">
-            <label for="inputmonth">Month</label>
-            <label for="inputdate">Date</label>
+            <label for="inputMonth">Month</label>
             <input type="text" class="form-control" id="inputMonth" placeholder="mm" minlength="1" maxlength="2" >
           </div>
           <div class="form-group col-md-5">
-            <label for="inputyear">Year</label>
-            <input type="text" class="form-control" id="inputyear" placeholder="yyyy" minlength="4" maxlength="4" >
+            <label for="inputYear">Year</label>
+            <input type="text" class="form-control" id="inputYear" placeholder="yyyy" minlength="4" maxlength="4" >
           </div>
         </div>
 
@@ -107,13 +110,17 @@
         </form>
         
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" value="submit" id="submitbtn" onclick="#">Submit</button>
+
+        <!-- What to display -->
+        <div class="akanName">
+        </div>
       </form> 
     </div>
   </div>
   
       
-    <!-- Optional JavaScript -->
+    <!-- Optional JavaScript --> 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -130,46 +137,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script 
-      document.getElementById("demo").innerHTML = month;
-    ></script>
-    <script
-      const d = new Date();
-      document.getElementById("demo").innerHTML = d.getFullYear();
-    ></script>
-
   </body>
 </html>
 
-<!-- <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputFirstName">First Name</label>
-      <input type="text" class="form-control" id="inputFirstName">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputLastName">Password</label>
-      <input type="password" class="form-control" id="inputLastName">
-    </div>
-  </div>
-  
-  <div class="form-row">
-    <div class="form-group col-md-2">
-      <label for="inputdate">Date</label>
-      <input type="text" class="form-control" id="inputDate">
-    </div>
-    <div class="form-group col-md-5">
-      <label for="inputmonth">Month</label>
-      <select id="inputmonth" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-5">
-      <label for="inputyear">Year</label>
-      <input type="text" class="form-control" id="inputyear">
-    </div>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> -->

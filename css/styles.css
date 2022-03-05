@@ -1,5 +1,9 @@
-{
+* {
   box-sizing: border-box;
+}
+
+body{
+  margin: 0;
 }
 
 .jumbotron {
@@ -42,6 +46,7 @@
   padding: 10px;
   margin: 0px;
 }
+
 input[type=text] {
   margin: auto;
   padding: 10px;
@@ -59,4 +64,8 @@ input[type=text] :focus {
   margin: auto;
   border: 2px solid #1073d0;
   font-size: 15px;
+}
+
+.akanName {
+
 }
