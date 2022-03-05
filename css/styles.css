@@ -2,37 +2,46 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
 }
 
 .jumbotron {
   background-image: url(/images/ghanapic.jpg);
-  opacity: 1;
+  background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
   font-size: xx-large;
 }
 
 .lead {
   font-weight: 400;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #introP {
   font-weight: 600;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .column {
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px;
+  height: 100%;
+}
+
+#introLine {
+  color: rgb(68, 28, 28);
+  font-weight: 500;
 }
 
 #description {
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   width: 100%;
   border: 20px solid white;
   padding: 50px;
@@ -47,25 +56,34 @@ body{
   margin: 0px;
 }
 
-input[type=text] {
+#CustomSelectGender,
+.form-control {
   margin: auto;
-  padding: 10px;
   border: 2px solid #1073d0;
   font-size: 15px;
+  padding: 5px;
 }
 
-input[type=text] :focus {
+/* #CustomSelectGender,
+.form-control : :hover {
   margin: auto;
   padding: 10px;
   border: 2xp solid orange;
+} */
+
+#submitbtn:hover {
+    background-color:#002ead;
+    transition: 0.7s;
 }
 
-#inlineFormCustomSelectGender {
-  margin: auto;
-  border: 2px solid #1073d0;
-  font-size: 15px;
+#refreshbtn:hover {
+  background-color:#002ead;
+  transition: 0.7s;
 }
-
 .akanName {
-
+  color: brown;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  text-align: center;
 }
