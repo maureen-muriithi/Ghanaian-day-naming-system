@@ -62,6 +62,7 @@ body {
   font-size: 15px;
   padding: 5px;
 }
+
 .form-control {
   margin: auto;
   border: 2px solid #1073d0;
@@ -78,6 +79,7 @@ body {
   background-color: #002ead;
   transition: 0.7s;
 }
+
 #akanNameResult {
   width: 100vw;
   color: brown;
