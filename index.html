@@ -2,152 +2,104 @@
 <html lang="en">
   <head>
     <title>Ghanaian-Akan-Names</title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS, then customised stylesheet(styles.css) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
 
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-      </nav>
-  </div>
     <div class="jumbotron">
       <h1 class="display-4" style="font-weight: 600; color: brown;" >What is your Akan Name?</h1>
-      <p class="lead">
-        <strong>Akan names are derived from Ghanian culture.</strong>
-      </p>
-      <hr class="my-4" />
-
+      <p class="lead"> <strong>Akan names are derived from Ghanian culture.</strong></p>
+      <hr class="my-4"/>
       <div class="row">
         <div class="column">
           <p id="introP">
             Frequently in Ghana, children are given their first name as a 'day
             name' which corresponds to the day in the week they were born.
           </p>
-          <a
-            class="btn btn-primary btn-lg"
-            href="https://en.wikipedia.org/wiki/Akan_names"
-            role="button"
-            >Learn more</a
-          >
+          <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Akan_names" role="button"> Learn more </a >
         </div>
       </div>
     </div>
-  </div>
 
-       <!-- What to display -->
-      
-       <div id="akanNameResult">
-      </div>
-  
-
-  <!-- A description of the application -->
-  <div class="row">
-    <div class="col-md-6" id="description">
-      <h4 id="introLine">Would you expect that the particular day of the week that you are or were born, can determine your first name? 
-      </h4>
-      <p>Well, according to the Ghanaian culture, it is quite frequent.
-      </p>
-      <p>
-        In accordance to the Akan naming culture in Ghana, depending on whether you are male or female, children are given a "day name" which corresponds to the day in the week when they were born. These day names have further meanings concerning the soul and character of the person.
-      </p>
-      <p>
-        This application will determine which particular day of the week you  were born, and what your Akan name is.
-      </p>
+    <!-- What to display -->
+    <div id="akanNameResult">
     </div>
 
-    <!-- form to fill name and date of birth --> 
+    <!-- A description of the application -->
+    <div class="row">
+      <div class="col-md-6" id="description">
+        <h4 id="introLine">Would you expect that the particular day of the week that you are or were born, can determine your first name? </h4>
+        <p> Well, according to the Ghanaian culture, it is quite frequent.</p>
+        <p> In accordance to the Akan naming culture in Ghana, depending on whether you are male or female, children are given a "day name" which corresponds to the day in the week when they were born. These day names have further meanings concerning the soul and character of the person.</p>
+        <p>This application will determine which particular day of the week you  were born, and what your Akan name is. </p>
+      </div>
+
+      <!-- form to fill name and date of birth --> 
       <!-- two columns for the name -->
-    <div class="col-md-6" id="colForm">
-      <h4 style="color: brown;"><strong>Go ahead and fill in your details to find out your Akan name!</strong></h4>
-      <form  name="Ghanaian-Akan-Names"onsubmit="return false" id="form" >
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputFirstName">First Name</label>
-            <input name="firstname" type="text" class="form-control" id="inputFirstName">
+      <div class="col-md-6" id="colForm">
+        <h4 style="color: brown;"><strong>Go ahead and fill in your details to find out your Akan name!</strong></h4>
+        <form  name="Ghanaian-Akan-Names"onsubmit="return false" id="form" >
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputFirstName">First Name</label>
+              <input name="firstname" type="text" class="form-control" id="inputFirstName">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputLastName">Last Name</label>
+              <input name="lastname" type="text" class="form-control" id="inputLastName">
+            </div>
+            <br>
+            <div class="errors" id="firstNameError"></div>
+            <br>
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputLastName">Last Name</label>
-            <input name="lastname" type="text" class="form-control" id="inputLastName">
-          </div>
-          <br>
-          <div class="errors" id="firstNameError"></div>
-          <br>
-        </div>
         
-        <!-- Input date, month and year of birth -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputdate">Birthdate</label>
-            <input name="birthDate" type="date" class="form-control" id="birthDate">
+          <!-- Input date, month and year of birth -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputdate">Birthdate</label>
+              <input name="birthDate" type="date" class="form-control" id="birthDate">
+            </div>
           </div>
-        </div>
-        <br>
-        <div class="errors" id="birthDateError"></div>
-        <br>
+          <br>
+          <div class="errors" id="birthDateError"></div>
+          <br>
 
-        <!-- Gender selection -->
-          <label class="my-1 mr-2" for="CustomSelectGender">Gender</label>
-          <select class="custom-select my-1 mr-sm-2" id="CustomSelectGender">
-            <option value="" selected>Choose...</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-         
-          <!-- <div class="genderLabel">
-            <label class="genderLabel" >Gender</label>
-            <div class="rdio rdio-default fs11">
-              <label for="male" class="gender-label">
-                <input type="radio" value="Male" name="Gender" id="Male">Male
-              </label>
+          <!-- Gender selection -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="my-1 mr-2" for="CustomSelectGender">Gender</label>
+              <select class="custom-select my-1 mr-sm-2" id="CustomSelectGender">
+                <option value="" selected>Choose...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
             </div>
-            <div class="rdio rdio-default fs11">
-              <label for="female" class="gender-label">
-                <input type="radio" value="Female" name="Gender" id="Female">Female
-              </label>
-            </div>
-          </div> -->
-
+          </div>  
           <br>
           <div class="errors" id="userGenderError"></div>
-        <br>
+          <br>
         
-        <!-- Submit button -->
-        <button type="submit" name="submit" class="btn btn-primary" value="submit" id="submitbtn" >Submit</button>
-        <button type="reset" name="reset" class="btn btn-primary" value="refresh" id="refreshbtn" >Refresh</button>
-        </div>
-
-      </form> 
+          <!-- Submit and refresh button -->
+          <div>
+            <button type="submit" name="submit" class="btn btn-primary" value="submit" id="submitbtn" >Submit</button>
+            <button type="reset" name="reset" class="btn btn-primary" value="refresh" id="refreshbtn" >Refresh</button>
+          </div>
+        </form> 
+      </div>
     </div>
-  </div>
   
-  <script src="/js/scripts.js"></script> 
-    <!-- Optional JavaScript --> 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then customised js(scripts.js) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" ></script>
+    <script src="/js/scripts.js"></script> 
   </body>
 </html>
 
