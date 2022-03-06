@@ -44,6 +44,12 @@
     </div>
   </div>
 
+       <!-- What to display -->
+      
+       <div id="akanNameResult">
+      </div>
+  
+
   <!-- A description of the application -->
   <div class="row">
     <div class="col-md-6" id="description">
@@ -69,13 +75,13 @@
             <label for="inputFirstName">First Name</label>
             <input name="firstname" type="text" class="form-control" id="inputFirstName">
           </div>
-          <br>
-          <div class="errors" id="firstNameError"></div>
-          <br>
           <div class="form-group col-md-6">
             <label for="inputLastName">Last Name</label>
             <input name="lastname" type="text" class="form-control" id="inputLastName">
           </div>
+          <br>
+          <div class="errors" id="firstNameError"></div>
+          <br>
         </div>
         
         <!-- Input date, month and year of birth -->
@@ -92,24 +98,34 @@
         <!-- Gender selection -->
           <label class="my-1 mr-2" for="CustomSelectGender">Gender</label>
           <select class="custom-select my-1 mr-sm-2" id="CustomSelectGender">
-            <option selected>Choose...</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
+            <option value="" selected>Choose...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
           </select>
+         
+          <!-- <div class="genderLabel">
+            <label class="genderLabel" >Gender</label>
+            <div class="rdio rdio-default fs11">
+              <label for="male" class="gender-label">
+                <input type="radio" value="Male" name="Gender" id="Male">Male
+              </label>
+            </div>
+            <div class="rdio rdio-default fs11">
+              <label for="female" class="gender-label">
+                <input type="radio" value="Female" name="Gender" id="Female">Female
+              </label>
+            </div>
+          </div> -->
+
           <br>
-          <div class="errors" id="UserGenderError"></div>
+          <div class="errors" id="userGenderError"></div>
         <br>
         
         <!-- Submit button -->
-        <button type="submit" name="submit" class="btn btn-primary" value="submit" id="submitbtn" onclick="getAkanName()">Submit</button>
-        <button type="reset" name="reset" class="btn btn-primary" value="refresh" id="refreshbtn" onclick="refreshForm()">Refresh</button>
+        <button type="submit" name="submit" class="btn btn-primary" value="submit" id="submitbtn" >Submit</button>
+        <button type="reset" name="reset" class="btn btn-primary" value="refresh" id="refreshbtn" >Refresh</button>
         </div>
 
-        <!-- What to display -->
-      
-        <div>
-          <p id="akanNameResult">""</p>
-        </div>
       </form> 
     </div>
   </div>
