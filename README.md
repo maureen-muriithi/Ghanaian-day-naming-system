@@ -1,7 +1,7 @@
 ### Ghananian-day-naming system
 
 > This is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name.
-> Live demo [ ]
+> Live demo [ https://maureen-muriithi.github.io/Ghanaian-day-naming-system/]
 
 ### Project Contributor
 
