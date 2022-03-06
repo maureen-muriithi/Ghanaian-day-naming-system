@@ -1,4 +1,3 @@
-// 'use strict';
 
 const submitButton = document.getElementById("submitbtn");
 submitButton.addEventListener('click', getAkanName);
@@ -19,42 +18,39 @@ function getAkanName(){
     var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-    //getting display objects for errors
-    var firstNameError = document.getElementById("firstNameError"); //atleast one name is required.
-    var birthDateError = document.getElementById("birthDateError");
-    var userGenderError = document.getElementById("userGenderError");
-
     //final display after submit
     var akanNameResult = document.getElementById("akanNameResult");
 
+
     //conditions for the required output
     if(!firstName) {
-        // firstNameError.innerHTML = "First Name is required";
+        //  An alert incase the user does not input a name
+        // //atleast one name is required.
         alert("First Name is required");
         return;
     }
     
     if (!birthDate){
-        // birthDateError.innerHTML = "A valid date of birth is required ";
+        //  An alert incase the user does not choose a birth date
         alert("A valid date of birth is required");
         return;
     }
    
     if(!userGender){
-        // userGenderError.innerHTML = "Gender is required"
+        // An alert incase the user does not choose a gender
         alert("Gender is required");
         return;
     } 
 
+    // How to get the value for the days, day of the week, and the Akan names for the particular days
     var bornDay = new Date (birthDate);
     var dayOfWeek = bornDay.getDay();
-    console.log("bornDay", bornDay.getDay())
 
 
     if(userGender === 'Male') {
-        akanNameResult.innerHTML = `Hello! ${firstName} ${lastName || ''} </br> You were born on, ${days[dayOfWeek]} Your Akan Name is:  ${maleNames[dayOfWeek]}`;
+        akanNameResult.innerHTML = `Hello, ${firstName}! ${lastName || ''}! </br> You were born on: ${days[dayOfWeek]}. </br> Your Akan Name is:  ${maleNames[dayOfWeek]}!`;
     } else {
-        akanNameResult.innerHTML = `Hello! ${firstName} ${lastName || ''} </br> You were born on, ${days[dayOfWeek]} Your Akan Name is:  ${femNames[dayOfWeek]}`;
+        akanNameResult.innerHTML = `Hello, ${firstName}! ${lastName || ''}! </br> You were born on: ${days[dayOfWeek]}. </br> Your Akan Name is:  ${femNames[dayOfWeek]}!`;
     }
 }
 
@@ -65,11 +61,3 @@ function refreshForm(){
     document.getElementById("userGenderError").innerHTML= "";
     document.getElementById("akanNameResult").innerHTML= "";
 }
-
-//To remove event listners
-function removeListeners() {
-    submitButton.removeEventListener('click', getAkanName)
-    refreshButton.removeEventListener('click', refreshForm) 
-}
-
-window.addEventListener('unload',removeListeners)
