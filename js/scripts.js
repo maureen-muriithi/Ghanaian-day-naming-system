@@ -48,9 +48,9 @@ function getAkanName(){
 
 
     if(userGender === 'Male') {
-        akanNameResult.innerHTML = `Hello, ${firstName}! ${lastName || ''}! </br> You were born on: ${days[dayOfWeek]}. </br> Your Akan Name is:  ${maleNames[dayOfWeek]}!`;
+        akanNameResult.innerHTML = `Hello, ${firstName} ${lastName || ''}! </br> You were born on: ${days[dayOfWeek]}. </br> Your Akan Name is:  ${maleNames[dayOfWeek]}!`;
     } else {
-        akanNameResult.innerHTML = `Hello, ${firstName}! ${lastName || ''}! </br> You were born on: ${days[dayOfWeek]}. </br> Your Akan Name is:  ${femNames[dayOfWeek]}!`;
+        akanNameResult.innerHTML = `Hello, ${firstName} ${lastName || ''}! </br> You were born on: ${days[dayOfWeek]}. </br> Your Akan Name is:  ${femNames[dayOfWeek]}!`;
     }
 }
 
