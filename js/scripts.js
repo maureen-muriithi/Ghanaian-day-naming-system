@@ -1,10 +1,3 @@
-
-var submitButton = document.getElementById("submitbtn");
-submitButton.addEventListener('click', getAkanName);
-
-var refreshButton = document.getElementById("refreshbtn");
-refreshButton.addEventListener('click', refreshForm)
-
 function getAkanName(){
 
     //getting inputs for the form
@@ -61,3 +54,9 @@ function refreshForm(){
     document.getElementById("userGenderError").innerHTML= "";
     document.getElementById("akanNameResult").innerHTML= "";
 }
+
+var submitButton = document.getElementById("submitbtn");
+submitButton.addEventListener('click', getAkanName);
+
+var refreshButton = document.getElementById("refreshbtn");
+refreshButton.addEventListener('click', refreshForm)
