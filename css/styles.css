@@ -7,7 +7,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url(/images/ghanapic.jpg);
+  background-image: url(images/ghanapic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
