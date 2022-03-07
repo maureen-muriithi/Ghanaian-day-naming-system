@@ -1,8 +1,8 @@
 
-const submitButton = document.getElementById("submitbtn");
+var submitButton = document.getElementById("submitbtn");
 submitButton.addEventListener('click', getAkanName);
 
-const refreshButton = document.getElementById("refreshbtn");
+var refreshButton = document.getElementById("refreshbtn");
 refreshButton.addEventListener('click', refreshForm)
 
 function getAkanName(){
